@@ -402,6 +402,10 @@ class RustdeskImpl {
     return Future(() => js.context.callMethod('setByName', ['ctrl_alt_del']));
   }
 
+  Future<void> sessionKillAissc({required UuidValue sessionId, dynamic hint}) {
+    return Future(() => js.context.callMethod('setByName', ['kill_aissc']));
+  }
+
   Future<void> sessionSwitchDisplay(
       {required bool isDesktop,
       required UuidValue sessionId,

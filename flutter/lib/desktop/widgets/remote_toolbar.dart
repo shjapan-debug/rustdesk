@@ -223,6 +223,29 @@ class RemoteMenuEntry {
       dismissCallback: dismissCallback,
     );
   }
+
+  static insertKillAissc(
+    SessionID sessionId,
+    EdgeInsets? padding, {
+    DismissFunc? dismissFunc,
+    DismissCallback? dismissCallback,
+  }) {
+    return MenuEntryButton<String>(
+      childBuilder: (TextStyle? style) => Text(
+        translate("Insert Kill Aissc"),
+        style: style,
+      ),
+      proc: () {
+        bind.sessionKillAissc(sessionId: sessionId);
+        if (dismissFunc != null) {
+          dismissFunc();
+        }
+      },
+      padding: padding,
+      dismissOnClicked: true,
+      dismissCallback: dismissCallback,
+    );
+  }
 }
 
 class RemoteToolbar extends StatefulWidget {

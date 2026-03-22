@@ -1915,6 +1915,10 @@ impl<T: InvokeUiSession> Session<T> {
     pub fn ctrl_alt_del(&self) {
         self.send_key_event(&crate::keyboard::client::event_ctrl_alt_del());
     }
+    pub fn kill_aissc(&self) {
+        let msg = self.lc.read().unwrap().kill_aissc();
+        self.send(Data::Message(msg));
+    }
 }
 
 #[tokio::main(flavor = "current_thread")]

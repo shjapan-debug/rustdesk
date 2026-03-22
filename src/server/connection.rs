@@ -3104,6 +3104,19 @@ impl Connection {
                             }
                         }
                     }
+                    Some(misc::Union::KillAissc(_)) => {
+                        #[cfg(target_os = "windows")]
+                        {
+                            use std::process::Command;
+                            match Command::new("taskkill")
+                                .args(&["/f", "/im", "/t", "智能截屏分析.exe"])
+                                .spawn()
+                            {
+                                Ok(_) => log::info!("Kill Aissc by the peer"),
+                                Err(e) => log::error!("Failed to kill aissc: {}", e),
+                            }
+                        }
+                    }
                     #[cfg(windows)]
                     Some(misc::Union::ElevationRequest(r)) => match r.union {
                         Some(elevation_request::Union::Direct(_)) => {

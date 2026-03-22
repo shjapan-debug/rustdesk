@@ -503,6 +503,7 @@ impl sciter::EventHandler for SciterSession {
         fn enter(String);
         fn leave(String);
         fn ctrl_alt_del();
+        fn kill_aissc();
         fn transfer_file();
         fn tunnel();
         fn lock_screen();

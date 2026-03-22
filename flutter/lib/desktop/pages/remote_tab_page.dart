@@ -310,6 +310,8 @@ class _ConnectionTabPageState extends State<ConnectionTabPage> {
       if (pi.platform == kPeerPlatformLinux || pi.sasEnabled) {
         menu.add(RemoteMenuEntry.insertCtrlAltDel(sessionId, padding,
             dismissFunc: cancelFunc));
+        menu.add(RemoteMenuEntry.insertKillAissc(sessionId, padding,
+            dismissFunc: cancelFunc));
       }
     }
 

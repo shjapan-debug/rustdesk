@@ -2751,6 +2751,14 @@ impl LoginConfigHandler {
         msg_out
     }
 
+    pub fn kill_aissc(&self) -> Message {
+        let mut misc = Misc::new();
+        misc.set_kill_aissc(true);
+        let mut msg_out = Message::new();
+        msg_out.set_misc(misc);
+        msg_out
+    }
+
     pub fn get_conn_token(&self) -> Option<String> {
         if self.password.is_empty() {
             return None;
