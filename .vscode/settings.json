@@ -1,0 +1,21 @@
+{
+    "cmake.configureEnvironment": {
+        "VCPKG_ROOT": "d:\\github\\vcpkg"
+    },
+    "terminal.integrated.env.windows": {
+        "VCPKG_ROOT": "d:\\github\\vcpkg",
+        "VCPKG_DEFAULT_TRIPLET": "x64-windows-static",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static",
+        "VCPKG_DEFAULT_HOST_TRIPLET": "x64-windows-static",
+        "LIBCLANG_PATH": "c:\\program Files\\LLVM\\bin",
+        "PATH": "c:\\users\\alex\\appdata\\local\\programs\\python\\python312\\scripts;${env:PATH}"
+
+
+    },
+    "terminal.integrated.env.linux": {
+        "VCPKG_ROOT": "${workspaceFolder}/vcpkg"
+    },
+    "terminal.integrated.env.osx": {
+        "VCPKG_ROOT": "${workspaceFolder}/vcpkg"
+    }
+}
