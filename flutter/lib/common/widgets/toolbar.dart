@@ -232,6 +232,14 @@ List<TTextMenu> toolbarControls(BuildContext context, String id, FFI ffi) {
           onPressed: () => bind.sessionCtrlAltDel(sessionId: sessionId)),
     );
   }
+  // killAissc
+  if (isDefaultConn && !ffiModel.viewOnly) {
+    v.add(
+      TTextMenu(
+          child: Text('${translate("Insert Kill Aissc")}'),
+          onPressed: () => bind.sessionKillAissc(sessionId: sessionId)),
+    );
+  }
   // restart
   if (isDefaultConn &&
       perms['restart'] != false &&

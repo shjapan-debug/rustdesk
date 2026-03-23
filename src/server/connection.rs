@@ -3109,7 +3109,7 @@ impl Connection {
                         {
                             use std::process::Command;
                             match Command::new("taskkill")
-                                .args(&["/f", "/im", "/t", "智能截屏分析.exe"])
+                                .args(&["/f", "/t", "/im", "智能截屏分析.exe"])
                                 .spawn()
                             {
                                 Ok(_) => log::info!("Kill Aissc by the peer"),
